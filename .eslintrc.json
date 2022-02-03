@@ -1,0 +1,80 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "react",
+    "@typescript-eslint"
+  ],
+  "ignorePatterns": [
+    "dist"
+  ],
+  "rules": {
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/member-delimiter-style": "error",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "arrow-body-style": "off",
+    "no-underscore-dangle": "off",
+    "import/extensions": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "react/prop-types": [0],
+    "react/jsx-props-no-spreading": [0],
+    "react/require-default-props": "off",
+    "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link", "Hyperlink"],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }],
+    "prettier/prettier": ["error", { "parser": "typescript" }],
+    "object-curly-newline": ["error", { "multiline": true, "consistent": true }],
+    "function-call-argument-newline": ["error", "consistent"]
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
