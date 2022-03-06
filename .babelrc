@@ -2,6 +2,6 @@
   "presets": [
     "@babel/preset-typescript",
     ["@babel/preset-env", { "targets": { "node": true } }],
-    ["@babel/preset-react", { "react": "automatic" }]
+    ["@babel/preset-react", { "runtime": "automatic" }]
   ]
 }
